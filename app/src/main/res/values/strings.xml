@@ -1,3 +1,115 @@
 <resources>
     <string name="app_name">CrayonMarket</string>
+
+    <!-- Common -->
+    <string name="loading">로딩중</string>
+    <string name="preference_file_key">CrayonMarket</string>
+    <string name="prefs_has_user_info">shownMainPage</string>
+    <string name="start">시작하기</string>
+    <string name="displayCost">%d원</string>
+
+    <!-- Login View -->
+    <string name="signUpDescription">Don\'t have an account</string>
+    <string name="passwordDescription">Enter your password</string>
+    <string name="emailDescription">Enter your email</string>
+    <string name="login">Login</string>
+    <string name="registerText">Register Now</string>
+    <string name="mainDescription">Welcome back!\nGlad to see you Again!</string>
+    <string name="email_is_not_valid">유효한 이메일이 아닙니다.</string>
+    <string name="password_is_not_valid">유효한 비밀번호가 아닙니다.</string>
+
+    <!-- SignUp View -->
+    <string name="name_is_not_valid">유효한 이름이 아닙니다.</string>
+    <string name="confirmName_is_not_valid">비밀번호와 같지 않습니다.</string>
+    <string name="register">Register</string>
+    <string name="password">Password</string>
+    <string name="userName">UserName</string>
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="email">Email</string>
+    <string name="signUpText">Hello! Register to get\nstarted</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <!-- UserInfo View -->
+    <string-array name="image_options">
+        <item>갤러리에서 선택</item>
+        <item>기본 이미지로 변경</item>
+    </string-array>
+    <string name="failed">실패!</string>
+
+    <!-- Welcome View -->
+    <string name="welcomeText">Welcome to CrayonMarket</string>
+    <string name="welcomeButtonText">CrayonMarket 시작하기</string>
+
+    <!-- Bottom Nav View -->
+    <string name="title_sale">메인</string>
+    <string name="title_chat_room">채팅방</string>
+    <string name="title_profile">프로필</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- sale View -->
+    <string name="available_for_trading">거래 가능</string>
+    <string name="see_possible_for_only_trading">거래가능만 보기</string>
+    <string name="write_post">게시물 작성</string>
+    <string name="appbarTitle">Latest Product</string>
+    <string name="doing_sale">거래중</string>
+    <string name="done_sale">거래 완료</string>
+    <string-array name="sale_index">
+        <item>최신순</item>
+        <item>높은 가격순</item>
+        <item>낮은 가격순</item>
+    </string-array>
+
+    <!-- chatting room View -->
+    <string name="recent_chats">최근 채팅</string>
+    <string name="is_not_chatting_room">대화중인 채팅방이 없어요..</string>
+
+    <!-- profile View -->
+    <string name="profile_update">프로필 수정</string>
+    <string name="secession">탈퇴하기</string>
+
+    <!-- add Sale View -->
+    <string name="title">제목</string>
+    <string name="input_title">제목을 입력해주세요.</string>
+    <string name="image">사진</string>
+    <string name="content">자세한 설명</string>
+    <string name="input_content">올릴 게시글 내용을 작성해주세요.</string>
+    <string name="cost">가격</string>
+    <string name="input_cost">가격을 입력해주세요. (숫자만 작성해주세요.)</string>
+    <string name="create_post_button_text">Create Post</string>
+    <string name="title_is_not_empty">제목 입력 공간에 빈 내용은 허용하지 않습니다</string>
+    <string name="content_is_not_empty">내용 입력 공간에 빈 내용은 허용하지 않습니다</string>
+    <string name="cost_is_onlt_int">숫자만 입력할 수 있습니다.</string>
+    <string name="post_edit">게시물 수정</string>
+    <string name="post_editting">게시물 수정하기</string>
+
+    <!-- Sale Detail View -->
+    <string name="go_current_chatting_room">채팅하기</string>
+    <string name="delete_post">게시글 삭제</string>
+    <string name="update_post">게시글 수정</string>
+    <string name="delete_or_update">수정하거나 삭제할 수 있습니다.</string>
+    <string name="are_you_sure_you_want_to_delete">정말로 삭제할까요?</string>
+    <string name="are_you_sure_you_want_to_update">정말로 수정할까요?</string>
+    <string name="cancel">취소</string>
+    <string name="post_deleted">게시물이 삭제되었습니다.</string>
+    <string name="change_sale_state">거래 상태 변경</string>
+
+    <string name="are_you_sure_you_wand_to_sale_complete">정말로 거래를 완료하시겠습니까?</string>
+    <string name="complete">완료</string>
+
+    <string name="are_you_sure_you_wand_to_sale_Ing">정말로 거래를 재개하시겠습니까?</string>
+
+    <!-- chatting View -->
+    <string name="hint_enter_message">메세지를 입력하세요.</string>
+    <string name="delete">삭제</string>
+    <string name="update">수정</string>
+    <string name="start_chatting">채팅을 시작해보세요!</string>
+
+    <!-- content load View -->
+    <string name="fail_to_connect">연결에 실패하였습니다.</string>
+    <string name="retry">재시도</string>
+    <string name="empty">올라온 판매글이 없어요...</string>
+
+    <!-- profile Update View -->
+    <string name="signout">로그아웃</string>
+    <string name="chage_profile">프로필이 수정되었습니다.</string>
 </resources>
