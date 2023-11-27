@@ -19,19 +19,22 @@
             android:name=".view.main.fragment.profile.profileupdate.ProfileUpdateActivity"
             android:exported="false" />
         <activity
+            android:name=".view.signUp.UserInfoActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.main.fragment.sale.addupdate.SaleAddActivity"
             android:exported="false" />
         <activity
             android:name=".view.main.fragment.sale.detail.SaleDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".view.signUp.UserInfoActivity"
-            android:exported="false" />
-        <activity
             android:name=".view.signUp.WelcomeActivity"
             android:exported="false" />
         <activity
             android:name=".view.main.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.main.fragment.chatroom.chatting.ChattingActivity"
             android:exported="false" />
         <activity
             android:name=".view.signUp.SignUpActivity"
