@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_sale">
+
+    <fragment
+        android:id="@+id/navigation_sale"
+        android:name="com.example.crayonmarket.view.main.fragment.sale.SaleFragment"
+        android:label="@string/title_sale"
+        tools:layout="@layout/fragment_sale" />
+
+    <fragment
+        android:id="@+id/navigation_chat_room"
+        android:name="com.example.crayonmarket.view.main.fragment.chatroom.ChatRoomFragment"
+        android:label="@string/title_chat_room"
+        tools:layout="@layout/fragment_chat_room" />
+
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.example.crayonmarket.view.main.fragment.profile.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" />
+</navigation>
