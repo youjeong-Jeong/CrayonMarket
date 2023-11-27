@@ -16,6 +16,15 @@
         android:theme="@style/Theme.CrayonMarket"
         tools:targetApi="31">
         <activity
+            android:name=".view.main.fragment.profile.profileupdate.ProfileUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.main.fragment.sale.addupdate.SaleAddActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.main.fragment.sale.detail.SaleDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.signUp.UserInfoActivity"
             android:exported="false" />
         <activity
