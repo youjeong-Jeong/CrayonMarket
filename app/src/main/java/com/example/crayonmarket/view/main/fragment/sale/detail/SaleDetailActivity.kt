@@ -16,7 +16,9 @@ import com.example.crayonmarket.databinding.ActivitySaleDetailBinding
 import com.example.crayonmarket.view.main.fragment.sale.addupdate.SaleAddActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.ktx.storage
 import kotlinx.coroutines.launch
 
 
@@ -65,7 +67,14 @@ class SaleDetailActivity : AppCompatActivity() {
         }
 
         chattingRoomButton.setOnClickListener {
-            viewModel.createChattingRoomAndGoCurrentChattingRoom()
+            MaterialAlertDialogBuilder(this@SaleDetailActivity).apply {
+                setTitle("채팅방 생성")
+                setMessage("채팅방을 생성하시겠습니까")
+                setNegativeButton("아니오") { _, _ -> }
+                setPositiveButton("예") { _, _ ->
+                    viewModel.createChattingRoomAndGoCurrentChattingRoom()
+                }
+            }.show()
         }
 
         menuButton.setOnClickListener { view ->
@@ -101,8 +110,8 @@ class SaleDetailActivity : AppCompatActivity() {
     private fun updateUi(uiState: SaleDetailUiState) = with(binding) {
         val detail = uiState.selectedSaleItem
 
-        val storage: FirebaseStorage = FirebaseStorage.getInstance("gs://market-6c0a3.appspot.com/")
-        val storageReference = storage.reference
+        //val storage: FirebaseStorage = FirebaseStorage.getInstance("gs://market-6c0a3.appspot.com/")
+        val storageReference = Firebase.storage.reference
 
         if (uiState.errorMessage != null) {
             showSnackBar(uiState.errorMessage)

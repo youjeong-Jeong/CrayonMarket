@@ -44,7 +44,6 @@ object ChatRepository {
         val db = Firebase.firestore
         val chatRoomCollection = db.collection("rooms")
         val chatRoomUuid = UUID.randomUUID().toString()
-        val uuid = UUID.randomUUID().toString()
 
         return try {
             val chatRoomDto = ChatRoomDto(
@@ -61,12 +60,11 @@ object ChatRepository {
         }
     }
 
-    private val messages = mutableListOf<Chat>()
 
     suspend fun getAllMessages(roomUuid: String): Flow<List<Chat>> {
         val currentUser = Firebase.auth.currentUser
         require(currentUser != null)
-
+        val messages = mutableListOf<Chat>()
         val db = Firebase.firestore
 
         return callbackFlow {
