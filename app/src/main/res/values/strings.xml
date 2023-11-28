@@ -62,7 +62,7 @@
 
     <!-- chatting room View -->
     <string name="recent_chats">최근 채팅</string>
-    <string name="is_not_chatting_room">대화중인 채팅방이 없어요..</string>
+    <string name="is_not_chatting_room">대화중인 채팅방이 없어요</string>
 
     <!-- profile View -->
     <string name="profile_update">프로필 수정</string>

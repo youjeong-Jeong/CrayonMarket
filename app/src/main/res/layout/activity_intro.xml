@@ -7,8 +7,8 @@
     tools:context=".view.intro.IntroActivity">
 
     <ImageView
-        android:layout_width="409dp"
-        android:layout_height="510dp"
+        android:layout_width="381dp"
+        android:layout_height="494dp"
         android:src="@drawable/intro"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
