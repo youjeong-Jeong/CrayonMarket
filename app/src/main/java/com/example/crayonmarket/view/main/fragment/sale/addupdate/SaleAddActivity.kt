@@ -17,7 +17,9 @@ import com.bumptech.glide.Glide
 import com.example.crayonmarket.R
 import com.example.crayonmarket.databinding.ActivitySaleAddBinding
 import com.google.android.material.snackbar.Snackbar
+import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.ktx.storage
 import kotlinx.coroutines.launch
 
 class SaleAddActivity : AppCompatActivity() {
@@ -68,8 +70,8 @@ class SaleAddActivity : AppCompatActivity() {
         val postCost = intent.getStringExtra("cost")
 
         val glide = Glide.with(this)
-        val storage: FirebaseStorage = FirebaseStorage.getInstance("gs://market-6c0a3.appspot.com/")
-        val storageReference = storage.reference
+        //val storage: FirebaseStorage = FirebaseStorage.getInstance("gs://crayoung-market.appspot.com")
+        val storageReference = Firebase.storage.reference
 
         if (postTitle != null && postContent != null && postUuid != null && postCost != null && postImage != null) {
             viewModel.changeToEditMode()
