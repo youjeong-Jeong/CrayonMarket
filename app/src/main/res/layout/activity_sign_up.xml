@@ -15,7 +15,7 @@
         tools:ignore="UselessParent">
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="281dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
@@ -85,11 +85,15 @@
         <Button
             android:id="@+id/signUpButton"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="71dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="20dp"
-            android:text="@string/register" />
+            android:textSize="30sp"
+            android:backgroundTint="#4A99FF"
+            android:fontFamily="@font/cherry"
+            android:text="@string/register"
+            android:textColorLink="#4A99FF" />
 
     </LinearLayout>
 

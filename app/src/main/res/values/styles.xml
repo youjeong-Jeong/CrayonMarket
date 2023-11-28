@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- res/values/styles.xml 파일 내에 정의 -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- 다른 스타일 속성들... -->
+
+        <!-- 버튼에 대한 스타일 정의 -->
+        <item name="buttonStyle">@style/MyButton</item>
+    </style>
+
+    <!-- MyButton 스타일 정의 -->
+    <style name="MyButton" parent="Widget.AppCompat.Button">
+        <item name="android:fontFamily">@font/cherry</item>
+    </style>
+
+</resources>

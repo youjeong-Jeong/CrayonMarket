@@ -108,7 +108,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|end"
-                    android:background="@color/cardview_dark_background"
+
                     android:padding="2dp"
                     android:text="@string/done_sale"
                     android:textColor="@color/md_theme_light_onPrimary"
@@ -208,6 +208,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginEnd="20dp"
+            android:backgroundTint="#4A99FF"
             android:text="@string/go_current_chatting_room" />
 
 

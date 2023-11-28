@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">CrayonMarket</string>
 
@@ -14,7 +15,7 @@
     <string name="emailDescription">Enter your email</string>
     <string name="login">Login</string>
     <string name="registerText">Register Now</string>
-    <string name="mainDescription">Welcome back!\nGlad to see you Again!</string>
+    <string name="mainDescription">Try to Login!</string>
     <string name="email_is_not_valid">유효한 이메일이 아닙니다.</string>
     <string name="password_is_not_valid">유효한 비밀번호가 아닙니다.</string>
 
@@ -26,7 +27,7 @@
     <string name="userName">UserName</string>
     <string name="confirmPassword">Confirm Password</string>
     <string name="email">Email</string>
-    <string name="signUpText">Hello! Register to get\nstarted</string>
+    <string name="signUpText">Register to Cranyon Market!</string>
     <string name="title_activity_main">MainActivity</string>
 
     <!-- UserInfo View -->
@@ -107,7 +108,7 @@
     <!-- content load View -->
     <string name="fail_to_connect">연결에 실패하였습니다.</string>
     <string name="retry">재시도</string>
-    <string name="empty">올라온 판매글이 없어요...</string>
+    <string name="empty">올라온 글이 없어요</string>
 
     <!-- profile Update View -->
     <string name="signout">로그아웃</string>

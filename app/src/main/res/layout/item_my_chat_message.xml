@@ -31,6 +31,7 @@
             android:id="@+id/layout_chat_container_me"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="#00BF9D"
             android:orientation="vertical">
 
             <TextView
@@ -43,6 +44,7 @@
                 android:paddingLeft="12dp"
                 android:paddingTop="8dp"
                 android:paddingRight="12dp"
+                android:textColor="#FFFFFF"
                 android:textSize="16sp"
                 tools:text="안녕하세요" />
 

@@ -157,7 +157,7 @@ class SaleDetailActivity : AppCompatActivity() {
                 salesCheckingText.setBackgroundColor(getColor(R.color.md_theme_light_primaryContainer))
             } else {
                 salesCheckingText.text = root.context.getString(R.string.done_sale)
-                salesCheckingText.setBackgroundColor(getColor(R.color.md_theme_dark_primaryContainer))
+                salesCheckingText.setBackgroundColor(getColor(R.color.md_theme_light_error))
             }
 
 

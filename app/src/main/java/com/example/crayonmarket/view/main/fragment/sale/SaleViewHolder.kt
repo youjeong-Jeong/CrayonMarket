@@ -30,7 +30,7 @@ class SaleViewHolder(
             salesCheckingText.setBackgroundColor(root.context.getColor(R.color.md_theme_light_primaryContainer))
         } else {
             salesCheckingText.text = root.context.getString(R.string.done_sale)
-            salesCheckingText.setBackgroundColor(root.context.getColor(R.color.md_theme_dark_primaryContainer))
+            salesCheckingText.setBackgroundColor(root.context.getColor(R.color.md_theme_light_error))
         }
 
         if (writerReference != null) {
