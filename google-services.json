@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "678331325339",
+    "project_id": "crayoung-market",
+    "storage_bucket": "crayoung-market.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678331325339:android:c78003f228baef7a2fdf3e",
+        "android_client_info": {
+          "package_name": "com.example.crayonmarket"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAWMsj9W4dsVzTO5Mlv-VOiQdp9DP-y8-s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
