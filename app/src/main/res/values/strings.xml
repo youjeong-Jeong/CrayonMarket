@@ -113,4 +113,5 @@
     <!-- profile Update View -->
     <string name="signout">로그아웃</string>
     <string name="chage_profile">프로필이 수정되었습니다.</string>
+    <string name="birth_text">%d년 %d월 %d일</string>
 </resources>

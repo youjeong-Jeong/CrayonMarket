@@ -86,6 +86,7 @@ class ChatRoomFragment : ViewBindingFragment<FragmentChatRoomBinding>() {
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.addDividerDecoration()
         loadState.emptyText.text = getString(R.string.is_not_chatting_room)
+        loadState.emptyText.textSize = 16.0F
         loadState.setListeners(adapter, swipeRefreshLayout)
         adapter.registerObserverForScrollToTop(recyclerView)
     }

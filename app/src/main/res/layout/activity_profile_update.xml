@@ -6,18 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".view.main.fragment.profile.profileupdate.ProfileUpdateActivity">
 
-    <DatePicker
-        android:id="@+id/dpSpinner2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:calendarViewShown="false"
-        android:datePickerMode="spinner"
-        app:layout_constraintBottom_toTopOf="@+id/done_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userNameEditText"
-        tools:ignore="MissingConstraints" />
-
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -94,6 +82,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.258" />
+
+    <TextView
+        android:id="@+id/birthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="50dp"
+        style="?attr/textAppearanceDisplaySmall"
+        app:layout_constraintTop_toBottomOf="@+id/userNameEditText"
+        tools:text="2000년 9월 25일"/>
 
     <Button
         android:id="@+id/done_button"

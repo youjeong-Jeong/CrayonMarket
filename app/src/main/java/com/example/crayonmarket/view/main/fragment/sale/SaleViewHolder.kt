@@ -12,7 +12,7 @@ class SaleViewHolder(
     private val binding: ItemSalesBinding, private val onClickSaleItem: (SaleItemUiState) -> Unit
 ) : RecyclerView.ViewHolder(binding.root) {
 
-    private val storageReference = Firebase.storage.reference
+    val storageReference = Firebase.storage.reference
 
     fun bind(uiState: SaleItemUiState) = with(binding) {
 
