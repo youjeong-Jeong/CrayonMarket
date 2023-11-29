@@ -18,11 +18,14 @@ class UserInfoViewModel : ViewModel() {
 
     var name: String = ""
     var selectedImage: Bitmap? = null
+    var year = 0
+    var month = 0
+    var day = 0
 
     fun sendInfo() {
         _uiState.update { UserInfoUiState.Loading }
         viewModelScope.launch(Dispatchers.IO) {
-            val result = UserRepository.saveInitUserInfo(name, selectedImage)
+            val result = UserRepository.saveInitUserInfo(name, selectedImage, year, month, day)
             if (result.isSuccess) {
                 _uiState.update { UserInfoUiState.SuccessToSave }
             } else {

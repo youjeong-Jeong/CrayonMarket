@@ -40,12 +40,12 @@ object UserRepository {
     }
 
     suspend fun saveInitUserInfo(
-        name: String, profileImage: Bitmap?
+        name: String, profileImage: Bitmap?, year : Int, month:Int, day:Int
     ): Result<Unit> {
         val user = Firebase.auth.currentUser
         require(user != null)
         val userDto = UserDto(
-            uuid = user.uid, name = name, email = user.email
+            uuid = user.uid, name = name, email = user.email, year = year, day = day, month = month
         )
 
         val userReference = Firebase.firestore.collection("users").document(user.uid)
@@ -143,6 +143,9 @@ object UserRepository {
                     uuid = userDto.uuid,
                     name = userDto.name,
                     email = userDto.email,
+                    year = userDto.year,
+                    month = userDto.month,
+                    day = userDto.day,
                     profileImageUrl = userDto.profileImageUrl
                 )
             )

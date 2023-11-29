@@ -10,6 +10,7 @@ import android.provider.MediaStore
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.widget.addTextChangedListener
@@ -53,12 +54,24 @@ class UserInfoActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityUserInfoBinding
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityUserInfoBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.userNameEditText.setText(viewModel.name)
         viewModel.selectedImage?.let { binding.profileImage.setImageBitmap(it) }
+        initEvent()
+
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                viewModel.uiState.collect(::updateUi)
+            }
+        }
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun initEvent(){
 
         binding.profileImage.setOnClickListener {
             onClickImage()
@@ -75,10 +88,10 @@ class UserInfoActivity : AppCompatActivity() {
             viewModel.sendInfo()
         }
 
-        lifecycleScope.launch {
-            repeatOnLifecycle(Lifecycle.State.STARTED) {
-                viewModel.uiState.collect(::updateUi)
-            }
+        binding.dpSpinner.setOnDateChangedListener { view, year, monthOfYear, dayOfMonth ->
+            viewModel.year = year
+            viewModel.month = monthOfYear
+            viewModel.day = dayOfMonth
         }
     }
 

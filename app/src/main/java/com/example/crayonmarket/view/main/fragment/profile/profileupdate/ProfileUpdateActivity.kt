@@ -12,6 +12,7 @@ import android.provider.MediaStore
 import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Lifecycle
@@ -28,6 +29,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.ktx.storage
 import kotlinx.coroutines.launch
 
 class ProfileUpdateActivity : AppCompatActivity() {
@@ -69,6 +71,7 @@ class ProfileUpdateActivity : AppCompatActivity() {
             }
         }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileUpdateBinding.inflate(layoutInflater)
@@ -87,6 +90,7 @@ class ProfileUpdateActivity : AppCompatActivity() {
         }
     }
 
+    @RequiresApi(Build.VERSION_CODES.O)
     private fun initEvent() = with(binding) {
         backButton.setOnClickListener {
             finish()
@@ -98,7 +102,7 @@ class ProfileUpdateActivity : AppCompatActivity() {
     }
 
     private fun initUi(userDetail: UserDetail) {
-        val storage: FirebaseStorage = FirebaseStorage.getInstance("gs://market-6c0a3.appspot.com/")
+        val storage = Firebase.storage
         val storageReference = storage.reference
         val pathReference = userDetail.profileImageUrl?.let { storageReference.child(it) }
 
@@ -118,6 +122,7 @@ class ProfileUpdateActivity : AppCompatActivity() {
                     viewModel.updateName(it.toString())
                 }
             }
+            birthText.text = getString(R.string.birth_text, userDetail.year, userDetail.month, userDetail.day)
         }
     }
 

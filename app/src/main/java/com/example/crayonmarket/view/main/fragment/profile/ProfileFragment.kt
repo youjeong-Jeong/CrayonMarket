@@ -31,6 +31,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.storage.FirebaseStorage
+import com.google.firebase.storage.ktx.storage
 import kotlinx.coroutines.launch
 
 class ProfileFragment : ViewBindingFragment<FragmentProfileBinding>() {
@@ -91,7 +92,7 @@ class ProfileFragment : ViewBindingFragment<FragmentProfileBinding>() {
     private fun updateUi(uiState: ProfileUiState, adapter: SaleAdapter) = with(binding) {
         adapter.submitData(viewLifecycleOwner.lifecycle, uiState.salePosts)
 
-        val storage: FirebaseStorage = FirebaseStorage.getInstance("gs://market-6c0a3.appspot.com/")
+        val storage = Firebase.storage
         val storageReference = storage.reference
 
         if (uiState.errorMessage != null) {
